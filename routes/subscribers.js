@@ -1,5 +1,6 @@
 const express = require("express")
 const router = express.Router()
+const Subscriber = require("../models/subscribers")
 
 //Getting all
 router.get("/", (req, res)=> {
@@ -8,7 +9,7 @@ router.get("/", (req, res)=> {
 
 //Getting One
 router.get("/:id", (req, res)=> {
-  
+  res.send(req.params.id)
 })
 
 //Creating One
